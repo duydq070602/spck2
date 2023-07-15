@@ -4,40 +4,37 @@
 
 let menu = ["Hạ Long","Đà Nẵng","Phú Quốc","Nha Trang","Vũng Tàu","Quy Nhơn","Cát Bà","Sầm Sơn"];
 function nhap(){
-  let x=0;
-  let y=0;
-  let a = confirm("Bạn đã có kế hoạch đi du lịch?");
+  let a = confirm("Have you got a plan to travel?");
   if(a == true){
-    let c = prompt("Bạn định đi đâu thế?");
-      for(let i=0;i<=menu.length; i++) {
-        if(c==menu[i]) {
-          console.log(menu[i]);
-          alert("Hãy xem những resort/hotel ở " + c + " bằng cách click vào BOOKING nhé!")
-          x++;}
+    let c = prompt("Where do you want to go?");
+    for(let i=0;i<=menu.length; i++) {
+      if(c==menu[i]) {
+         let booking = document.getElementById("product");
+         booking.scrollIntoView();
+         alert("Book a place right now!");
         }
-      if(x==0){     
+      else{
         menu.push(c) ;
         localStorage.setItem("menu", JSON.stringify(menu));
-        alert("Địa điểm này chưa có trong dữ liệu. Cảm ơn bạn đã bổ sung!");
-        } 
-      }
-  else{
-    let b = prompt("Hãy để tôi gợi ý cho bạn: "+ menu + "... Bạn đã chọn được chưa?");
-    for(let i=0;i<=menu.length; i++) {
-       if(b==menu[i]) {
-        console.log(menu[i]);
-        alert("Hãy xem những resort/hotel ở " + b + " bằng cách click vào BOOKING nhé!");
-        y++;
-      }
-    } 
-    if(y==0){
-      menu.push(c) ;
-      localStorage.setItem("menu", JSON.stringify(menu));
-      alert("Địa điểm này chưa có trong dữ liệu. Cảm ơn bạn đã bổ sung!");
       }
     }
   }
+  else{
+    let d = confirm("Let us suggest some places for you: " + menu + ". Have you made a decision yet? ");
+    if(d==true) {
+      let booking = document.getElementById("product");
+      booking.scrollIntoView();
+      alert("Book a place right now!");
+    }
+    else{
+      alert("Keep on searching!");
+    }
+}
+}
 
+
+
+  
 
 var deadline = new Date("aug 15, 2023 15:37:25").getTime();
   
@@ -97,25 +94,25 @@ let products = {
       },
   
       {
-        name: "Resort",
+        name: "Resort Nha Trang",
         price: "780.000đ - 1.470.000đ",
         image: "assets/img/hotel.jpg",
       },
   
       {
-        name: "",
+        name: "Hotel Vung Tau",
         price: "780.000đ - 1.670.000đ",
         image: "assets/img/hotel.jpg",
       },
   
       {
-        name: "",
+        name: "Resort Quy Nhon",
         price: "780.000đ - 1.670.000đ",
         image: "assets/img/hotel.jpg",
       },
   
       {
-        name: "",
+        name: "Hotel Phu Quoc",
         price: "780.000đ - 1.670.000đ",
         image: "assets/img/hotel.jpg",
       },
