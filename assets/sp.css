@@ -12,6 +12,7 @@
   position: relative;
   text-align: center;
   padding-bottom:100px;
+  background-color: #9eb2f7;
 }
 .header:before {
   content: ' ';
@@ -22,7 +23,7 @@
   width: 100%;
   height: 100%;
   opacity: 0.8;
-  background-image: url('img/');
+  background-image: url('img/summer-sea.gif');
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -74,24 +75,99 @@ ul {
     color:black
   }
 
-
+.well{
+  background-color: #aaf6d6 ;
+  padding: 100px 0px 150px 490px;
+}
 .welcome{
-  padding: 150px 0px 200px;
+  padding: 20px
   text-align: center;
-  background-image: url("img/summer-sea.gif");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .welcome p{
+  font-family: 'Rocher';
   font-size: 20px;
 }
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+.welcome h2{
+  font-family: 'Rocher';
+  font-size: 35px;
+}
+@font-palette-values --Mint {
+  font-family: Rocher;
+  base-palette: 7;
+}
+@font-palette-values --Grays {
+  font-family: Rocher;
+  base-palette: 9;
+}
+.grays {
+  font-palette: --Grays;
+}
+.mint {
+  font-palette: --Mint;
+}
+
+.welcome {
+  display: block;
+  width: 400px;
+  min-height: 200px;
+  border: 3px solid var(--primary);
+
+  box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+        20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 
+        30px -30px 0 -3px var(--background), 30px -30px var(--orange), 
+        40px -40px 0 -3px var(--background), 40px -40px var(--red); 
+  transition: box-shadow 1s, top 1s, left 1s;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.welcome:hover {
+  top: -40px;
+  left: 40px;
+  box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green),
+      0 0 0 -3px var(--background), 0 0 0 0  var(--yellow),
+      0 0 0 -3px var(--background), 0 0 0 0  var(--orange),
+      0 0 0 -3px  var(--background), 0 0 0 0  var(--red);
+}
+:root {
+  --primary: #555BFF;
+  --secondary: #22D2A0;
+  --background: white;
+  --green: #1FC11B;
+  --yellow: #FFD913;
+  --orange: #FF9C55;
+  --red: #FF5555;
+} 
+
+.welcome p {
+  font-size: 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.welcome h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+
+
 
 #weather {
   background-color: #aaf6d6;
-  padding: 30px;
+  padding: 30px 40px 30px 50px;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
 }
 #weather a{
   width:fit-content;
@@ -99,7 +175,18 @@ ul {
 .icon{
   margin-top: 30px;
 }
-
+#weather p{
+  writing-mode: vertical-lr;
+  font-size: 20px;
+  margin: 15px;
+}
+.rotate {
+  transform: rotate(360deg);
+}
+.wea{
+  display: flex;
+  margin-top: 40px;
+}
 .count-down-text{
   margin-bottom:30px;
 }
@@ -109,9 +196,8 @@ ul {
 }
 
 
-
 .count-down{
-  margin-left: 100px;
+  margin-left: 20px;
   text-align: center;
   margin-top: 100px;
 }
@@ -173,7 +259,7 @@ smalltext{
 }
 .guide-container .guide-item{
   width: 350px;
-  height: 300px;
+  height: 350px;
   background-color:rgb(121, 220, 152);
   margin: 0px 20px;
   border-radius: 10px;
@@ -275,6 +361,8 @@ img{
 #booking{
   text-align: center;
   padding-top: 60px;
+  background-color: #a8e5f6ce;
+  padding-bottom: 30px;
 }
 #booking h3{
 
@@ -285,30 +373,43 @@ img{
   background-color: #6a9baa;
   padding-top: 30px;
 }
+#footer p{
+  font-size: large;
+}
 .footer-content{
   padding: 50px;
   text-align: center;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 #footer h4{
   font-size: 30px;
   text-align: center;
   
 }
+.footer-1{
+  display: flex;
+  justify-content: space-around;
+}
 .footer-2{
-  border: #3e64ec;
-  border-right: 2px;
+  border-left: solid 2px;
+}
+.ft-2{
+  margin-bottom: 10px;
 }
 .footer-2 a{
   text-decoration: none;
   color: black;
 }
-
+.footer-3{
+  border-left: solid 2px;
+  padding-left: 50px;
+}
 .footer-3 input{
   background-color:#93EDC7;
   border: 2px solid;
   border-radius: 4px;
+  
 }
 .footer-3 button{
   background-color: #79c4f9;

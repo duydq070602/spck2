@@ -2,7 +2,7 @@
 
 
 
-let menu = ["Hạ Long","Đà Nẵng","Phú Quốc","Nha Trang","Vũng Tàu",];
+let menu = ["Hạ Long","Đà Nẵng","Phú Quốc","Nha Trang","Vũng Tàu","Quy Nhơn","Cát Bà","Sầm Sơn"];
 function nhap(){
   let x=0;
   let y=0;
@@ -73,18 +73,25 @@ let products = {
     data: [
       {
         name: "Central Luxury Hạ Long Hotel",
-        price: "1.500.000đ/night",
+        price: "1.500.000đ",
         image: "assets/img/hotel.jpg",
+
       },
   
       {
-        name: "Resort...",
+        name: "Resort Ha Long",
         price: "780.000đ - 1.470.000đ",
         image: "assets/img/hotel.jpg",
       },
   
       {
-        name: "Khach san...",
+        name: "Khach san Phu Quoc",
+        price: "780.000đ - 1.470.000đ",
+        image: "assets/img/hotel.jpg",
+      },
+  
+      {
+        name: "Resort Da Nang",
         price: "780.000đ - 1.470.000đ",
         image: "assets/img/hotel.jpg",
       },
@@ -92,36 +99,30 @@ let products = {
       {
         name: "Resort",
         price: "780.000đ - 1.470.000đ",
-        image: "assets/img/",
-      },
-  
-      {
-        name: "",
-        price: "780.000đ - 1.470.000đ",
-        image: "assets/img/",
+        image: "assets/img/hotel.jpg",
       },
   
       {
         name: "",
         price: "780.000đ - 1.670.000đ",
-        image: "assets/img/",
+        image: "assets/img/hotel.jpg",
       },
   
       {
         name: "",
         price: "780.000đ - 1.670.000đ",
-        image: "",
+        image: "assets/img/hotel.jpg",
       },
   
       {
         name: "",
         price: "780.000đ - 1.670.000đ",
-        image: "",
+        image: "assets/img/hotel.jpg",
       },
       {
         name: "",
         price: "780.000đ - 1.670.000đ",
-        image: "",
+        image: "assets/img/hotel.jpg",
       },
   
     ],
@@ -146,9 +147,9 @@ let products = {
   
     card.appendChild(name);
     card.appendChild(price);
-  
+
     let btnAdd = document.createElement("button");
-    btnAdd.innerText = "Dat khach san";
+    btnAdd.innerText = "Book now";
     btnAdd.classList.add("btn", "btn-outline-info", "btn1"); 
     console.log(btnAdd);
     card.appendChild(btnAdd);
@@ -171,5 +172,12 @@ const addToCart = () => {
     
 }
 
-
-
+let r = document.getElementById("comment");
+let bc = document.getElementById("send");
+bc.addEventListener("click", (e) => {
+  let user = JSON.parse(localStorage.user)
+  user.push({
+   
+  })
+  localStorage.setItem("feedback", JSON.stringify(bc));
+})
